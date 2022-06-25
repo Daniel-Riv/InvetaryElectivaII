@@ -7,6 +7,7 @@ require('./database/connect-database');
 
 //middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 //settings
 app.set('port', process.env.PORT || 5000);

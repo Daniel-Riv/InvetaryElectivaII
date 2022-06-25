@@ -35,7 +35,7 @@ const signUp = async (req, res) => {
         )
         return res.status(200).json({
             success: true,
-            validation: user,
+            user: user,
             token
         });
     } catch (error) {
