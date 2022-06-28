@@ -26,12 +26,11 @@ const unlockUser =async(req,res)=>{
 }
 const unlocked = async(req,res)=>{
     try {
-        const user = await User.find({ status: false });
+        const user = await User.find({ state: false });
         if (!user || user.length === 0) return res.status(400).json({
             success: false,
             message: 'There are no users blocked'
         });
-
         return res.status(200).json({
             success: true,
             user
