@@ -9,7 +9,7 @@ const unlockUser =async(req,res)=>{
                 error: 'the email entered does not exist'
             });
         }
-        user.status = true;
+        user.state = true;
         user.attemps = 0;
         await user.save();
         return res.status(200).json({

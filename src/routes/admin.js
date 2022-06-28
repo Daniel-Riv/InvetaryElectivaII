@@ -6,6 +6,6 @@ const { validateRole } = require('../middleware/validator-admin');
 const router = Router();
 
 router.get('/unlock-user',[validator,validateRole],unlocked);  
-router.get('/userBlock',[validator,validateRole],unlockUser);
+router.post('/userBlock',[validator,validateRole],unlockUser);
 
 module.exports= router;
